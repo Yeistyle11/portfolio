@@ -4,6 +4,14 @@ body {
     font-family: 'Montserrat', sans-serif;
 }
 
+nav a {
+    color: #282828;
+}
+nav .active {
+    border-radius: 20px;
+    border: 1px solid #E20000;
+}
+
 #contacto {
     background-image: url("../images/fondo-contacto.png");
     background-size: cover;
