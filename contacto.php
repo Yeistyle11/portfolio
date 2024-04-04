@@ -1,5 +1,37 @@
 <?php
-    $pg = "contacto";
+$pg = "contacto";
+
+if ($_POST) {
+    $nombre = $_POST["txtNombre"];
+    $correo = $_POST["txtCorreo"];
+    $telefono = $_POST["txtTelefono"];
+    $mensaje = $_POST["txtMensaje"];
+
+    //Varios destinatarios
+    $para = "yeison.gar074@gmail.com";
+    $titulo = "Recibiste un mensaje desde tu web";
+
+    //Mensaje
+
+    $cuerpo = "
+        Nombre: $nombre <br>
+        Correo: $correo <br>
+        Telefono: $telefono <br>
+        Mensaje: $mensaje
+        ";
+
+    //Para enviar un correo HTML, debe establecerse la cabecera  Content-type
+    $cabeceras = 'MIME-Version: 1.0' . "\r\n";
+    $cabeceras .= 'Content-type: text/html; charset=UTF-8' . "\r\n";
+
+    //Cabeceras adicionales
+    $cabeceras .= 'To: yeison.gar074@gmail.com' . "\r\n";
+    $cabeceras .= 'From: yeison.gar074@gmail.com' . "\r\n";
+
+    //Enviarlo
+    //mail($para, $titulo, $cuerpo, $cabeceras);
+    header("location: confirmacion-envio.php");
+}
 ?>
 
 <!DOCTYPE html>
@@ -51,7 +83,7 @@
             </div>
         </div>
     </main>
-    <footer class=" container mt-auto pb-4">
+    <footer class="container mt-auto pb-4">
         <div class="btn-whatsapp">
             <i class="fa-brands fa-whatsapp"></i>
         </div>
