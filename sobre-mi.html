@@ -1,7 +1,3 @@
-<?php
-    $pg = "sobre-mi";
-?>
-
 <!DOCTYPE html>
 <html lang="es">
 
@@ -18,14 +14,45 @@
 
 <body id="sobre-mi" class="d-flex flex-column h-100">
     <header class="container">
-        <?php include_once("menu.php"); ?>
+        <nav class="navbar navbar-expand-md mb-4">
+            <div class="container-fluid">
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse"
+                    aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarCollapse">
+                    <ul class="navbar-nav me-auto mb-2 mb-md-0">
+                        <li class="nav-item">
+                            <a class="nav-link" href="index.html">Inicio</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="sobre-mi.html">Sobre mi</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="proyectos.html">Proyectos</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="contacto.html">Contacto</a>
+                        </li>
+                    </ul>
+                    <div class="d-inline">
+                        <a href="" class="btn btn-rojo">Descargar mi CV<i class="fa-solid fa-download"></i></a>
+                    </div>
+                </div>
+            </div>
+        </nav>
     </header>
     <main>
         <section id="bio" class="container">
             <div class="row">
                 <div class="col-12 col-sm-7">
                     <h1 class="col-12 py-5">Sobre mi</h1>
-                    <p>Apasionado por la tecnologia y gestion de proyectos.</p>
+                    <p>Apasionado por la tecnología y la programación, siempre estoy en la búsqueda de nuevas
+                        oportunidades para aprender y mejorar mis habilidades. Me encanta explorar todo lo relacionado
+                        con el mundo digital, desde el desarrollo de software hasta las últimas innovaciones
+                        tecnológicas. Mi curiosidad y dedicación me impulsan a enfrentar desafíos y a encontrar
+                        soluciones creativas, lo que me permite crecer constantemente en este campo en constante
+                        evolución.</p>
                     <a href="contacto.html" class="btn btn-rojo my-5 d-none d-sm-block w-25">Enviar mensaje</a>
                 </div>
                 <div class="col-12 col-sm-4">
@@ -130,7 +157,7 @@
                             <img src="images/sena.png" class="img-fluid baw" title="Sena">
                         </div>
                         <div class="col-12- col-sm-10 p-3">
-                            <h3>Tecnico en programacion de software</h3>
+                            <h3>Técnico en programación de software</h3>
                             <h4>Servicio nacional de aprendizaje (Sena)</h4>
                             <h5>2019-2020</h5>
                             <p>https://www.sena.edu.co/</p>
@@ -143,7 +170,7 @@
                             <img src="images/sena.png" class="img-fluid baw" title="Sena">
                         </div>
                         <div class="col-12- col-sm-10 p-3">
-                            <h3>Tecnologia en analisis y desarrollo de sistemas de informacion</h3>
+                            <h3>Tecnólogo en análisis y desarrollo de sistemas de información</h3>
                             <h4>Servicio nacional de aprendizaje (Sena)</h4>
                             <h5>2021-2023</h5>
                             <p>https://www.sena.edu.co/</p>
@@ -153,13 +180,13 @@
                 <div class="col-12 col-sm-6">
                     <div class="row">
                         <div class="col-2 py-3 my-auto d-none d-sm-block">
-                            <img src="images/poli.png" class="img-fluid baw" title="Politecnico grancolombiano">
+                            <img src="images/uniminuto.png" class="img-fluid baw" title="Uniminuto">
                         </div>
                         <div class="col-12- col-sm-10 p-3">
-                            <h3>Ingenieria en sistemas</h3>
-                            <h4>Politecnico grancolombiano</h4>
+                            <h3>Ingeniero de Software</h3>
+                            <h4>corporación universitaria minuto de Dios</h4>
                             <h5>2024</h5>
-                            <p>https://www.politecnicograncolombiano.com/</p>
+                            <p>https://www.uniminuto.edu</p>
                         </div>
                     </div>
                 </div>
@@ -177,7 +204,7 @@
                     <img src="images/depcsuite.png" alt="DEPCSUITE" class="img-fluid">
                 </div>
                 <div class="col-sm-10 col-12 my-3">
-                    <h3>Desarrollador Junior Full Stack</h3>
+                    <h3>Desarrollador Junior</h3>
                     <h4>DePCSuite</h4>
                     <h5>enero 2024 - junio 2024</h5>
                     <p>Diseño y desarrollo de sistemas internos para el organismo. Mantenimiento de los sistemas
@@ -186,6 +213,22 @@
                         Organización del proyecto en
                         Redmine. Resolución de pedidos mediante sistema de incidencias.</p>
                 </div>
+            </div>
+            <div class="row shadow">
+                <div class="col-sm-2 d-none d-sm-block p-5">
+                    <img src="images/mantum.png" alt="MANTUM" class="img-fluid">
+                </div>
+                <div class="col-sm-10 col-12 my-3">
+                    <h3>Desarrollador</h3>
+                    <h4>Mántum S.A.S.</h4>
+                    <h5>Junio 2024</h5>
+                    <p>Diseño y desarrollo de sistemas internos para el organismo. Mantenimiento de los sistemas
+                        existentes. Gestión de base de
+                        datos y reportes. Trato con distintos clientes internos y equipos. Reuniones de avance.
+                        Organización del proyecto en
+                        Redmine. Resolución de pedidos mediante sistema de incidencias.</p>
+                </div>
+            </div>
         </section>
         <section id="formacion" class="container mb-5">
             <div class="row">
@@ -235,6 +278,8 @@
                                 <h2>HOBBIES</h2>
                                 <ul>
                                     <li>Futbol</li>
+                                    <li>Videojuegos</li>
+                                    <li>Leer</li>
                                 </ul>
                             </div>
                         </div>
@@ -249,15 +294,17 @@
                 <div class="col-sm-3 col-12">
                     <a href="https://github.com"><i class="fa-brands fa-github"></i></a>
                     <a href="https://linkedin.com"><i class="fa-brands fa-linkedin-in"></i></a>
+                    <a href="https://wa.me/573104277843" target="_blank" rel="noopener noreferrer">
+                        <i class="fa-brands fa-whatsapp px-3 pt-3 pb-4"></i>
+                    </a>
                 </div>
                 <div class="col-sm-3 col-12">
                     Sponsor <a href="https://depcsuite.com">DePC Suite</a>
                 </div>
                 <div class="col-sm-3 col-12">
-                    <a href="mailto:info@nelsontarche.com.ar">info@nelsontarche.com.ar</a>
+                    <a href="yeison:info@yeisongarcia.com.ar">info@yeisongarcia.com.co</a>
                 </div>
             </div>
-            <a href="https://api.whatsapp.com/send?phone=+541162442898" target="_blank"><i class="fa-brands fa-whatsapp px-3 pt-3 pb-4"></i></a>
         </footer>
 
 </body>
