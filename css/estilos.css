@@ -1,10 +1,11 @@
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
 
+/* --- Variables CSS --- */
 :root {
-    --primary-color: #E20000;
-    --secondary-color: #370a6d;
-    --dark-text-color: #282828;
-    --light-text-color: #6a6a6a;
+    --primary-color: #E20000; /* Rojo principal */
+    --secondary-color: #370a6d; /* Morado/Violeta */
+    --dark-text-color: #282828; /* Texto oscuro general */
+    --light-text-color: #6a6a6a; /* Texto gris claro */
     --white-color: #ffffff;
     --light-grey-bg: #eee;
     --red-gradient-start: rgba(184, 37, 20, 1);
@@ -12,6 +13,7 @@
     --red-gradient-end: rgba(240, 47, 23, 1);
 }
 
+/* --- Base Styles --- */
 body {
     font-family: 'Montserrat', sans-serif;
     margin: 0;
@@ -92,7 +94,7 @@ p {
     color: var(--white-color);
 }
 
-/* --- Botón de WhatsApp --- */
+/* --- Botón de WhatsApp Flotante --- */
 .btn-whatsapp {
     position: fixed;
     right: 50px;
@@ -335,10 +337,14 @@ p {
     color: var(--dark-text-color);
 }
 
+/* Ajustes para las imágenes de Experiencia y Formación */
 #experiencia img,
 #formacion img {
     filter: grayscale(100%);
     transition: filter 0.3s ease;
+    max-width: 100px; /* Tamaño máximo para los logos */
+    height: auto; /* Mantiene la proporción */
+    object-fit: contain; /* Asegura que la imagen completa sea visible */
 }
 
 #experiencia img:hover,
@@ -489,8 +495,34 @@ p {
         padding: 15px;
     }
 
-    #idiomas .card { /* Esta regla podría ser redundante o necesitar ajuste si se usa .card-idioma */
-        padding: 20px 0;
+    /* Ajustes responsive para las tarjetas de Idiomas/Hobbies */
+    #idiomas .card-idioma {
+        flex-direction: column; /* Apila el icono y el contenido verticalmente */
+        height: auto; /* Permite que la altura se ajuste al contenido */
+        border-radius: 15px; /* Asegura el redondeo completo de la tarjeta */
+    }
+
+    #idiomas .card-icon-wrapper {
+        width: 100%; /* El contenedor del icono toma todo el ancho superior */
+        height: 120px; /* Altura fija para el área del icono, puedes ajustarla */
+        border-top-right-radius: 15px; /* Redondea la esquina superior derecha */
+        border-bottom-left-radius: 0; /* Elimina el redondeo inferior izquierdo cuando se apila */
+        border-top-left-radius: 15px; /* Asegura el redondeo superior izquierdo */
+        padding: 15px; /* Ajusta el relleno si es necesario */
+    }
+
+    #idiomas .card-body { /* Asegúrate de que esta clase exista en tu HTML si la usas */
+        width: 100%; /* El cuerpo de la tarjeta toma todo el ancho inferior */
+        padding: 20px; /* Asegura un relleno consistente para el contenido */
+    }
+
+    /* Ajustes para las columnas de imagen en Experiencia y Formación */
+    #experiencia .col-12.col-sm-2,
+    #formacion .col-12.col-sm-2 {
+        padding: 15px; /* Ajusta el padding para la columna del logo */
+        display: flex; /* Usa flexbox para centrar el contenido vertical y horizontalmente */
+        justify-content: center;
+        align-items: center;
     }
 }
 
@@ -535,5 +567,14 @@ p {
 
     #idiomas h2 {
         font-size: 1.1em;
+    }
+
+    #idiomas .card-icon-wrapper {
+        height: 100px;
+    }
+
+    #experiencia img,
+    #formacion img {
+        max-width: 80px;
     }
 }
