@@ -1,107 +1,178 @@
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
 
+:root {
+    --primary-color: #E20000;
+    --secondary-color: #370a6d;
+    --dark-text-color: #282828;
+    --light-text-color: #6a6a6a;
+    --white-color: #ffffff;
+    --light-grey-bg: #eee;
+    --red-gradient-start: rgba(184, 37, 20, 1);
+    --red-gradient-middle: rgba(214, 52, 30, 1);
+    --red-gradient-end: rgba(240, 47, 23, 1);
+}
+
 body {
     font-family: 'Montserrat', sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
 }
 
+/* --- Navegación --- */
 nav a {
-    color: #282828;
+    color: var(--dark-text-color);
+    text-decoration: none;
 }
+
 nav .active {
     border-radius: 20px;
-    border: 1px solid #E20000;
+    border: 1px solid var(--primary-color);
+    padding: 5px 15px;
 }
 
-#contacto {
-    background-image: url("../images/fondo-contacto.png");
-    background-size: cover;
-}
-
-#proyectos {
-    background-image: url("../images/fondo-proyectos.png");
-    background-size: cover;
-}
-
-#sobre-mi {
-    background-image: url("../images/fondo-proyectos.png");
-    background-size: cover;
-}
-
+/* --- Secciones de Fondo --- */
+#contacto,
 #inicio {
     background-image: url("../images/fondo-contacto.png");
     background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
 }
 
-#bio h1, h1 {
-    color: #E20000
+#proyectos,
+#sobre-mi {
+    background-image: url("../images/fondo-proyectos.png");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+/* --- Tipografía General --- */
+#bio h1,
+h1 {
+    color: var(--primary-color);
 }
 
 p {
-    color: #6a6a6a;
+    color: var(--light-text-color);
 }
 
+/* --- Botones --- */
 .btn1 {
-    color: #370a6d;
-    background-color: white;
-    border: 0px;
+    color: var(--secondary-color);
+    background-color: var(--white-color);
+    border: 1px solid var(--secondary-color);
     border-radius: 15px;
     text-decoration: none;
+    padding: 10px 20px;
+    display: inline-block;
+    transition: all 0.3s ease;
 }
 
 .btn1:hover {
-    color: white;
-    background-color: #370a6d;
+    color: var(--white-color);
+    background-color: var(--secondary-color);
+    border-color: var(--secondary-color);
 }
 
-.btn-rojo, #bio .btn-rojo, nav .btn-rojo {
-    color: white;
+.btn-rojo {
+    color: var(--white-color);
     background-color: #ff4a49;
-    border: 0px;
-    padding: 10px;
+    border: 0;
+    padding: 10px 20px;
     text-decoration: none;
     border-radius: 15px;
+    display: inline-block;
+    transition: all 0.3s ease;
 }
 
-.btn-rojo, #bio .btn-rojo, nav .btn-rojo:hover {
-    color: white;
-    background-color: #370a6d;
+.btn-rojo:hover {
+    background-color: var(--secondary-color);
+    color: var(--white-color);
 }
 
-
+/* --- Botón de WhatsApp --- */
 .btn-whatsapp {
     position: fixed;
     right: 50px;
+    bottom: 50px;
+    z-index: 1000;
+    background-color: #25D366; /* Color de WhatsApp */
+    color: white;
+    border-radius: 50%;
+    width: 60px;
+    height: 60px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 30px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    transition: transform 0.3s ease;
+}
+.btn-whatsapp:hover {
+    transform: scale(1.1);
 }
 
+/* --- Enlaces de Color --- */
 .link-rojo {
     color: #ff4a49;
     text-decoration: none;
+    transition: color 0.3s ease;
 }
 
-#contacto footer, #inicio footer {
-    color: white;
+.link-rojo:hover {
+    color: var(--secondary-color);
 }
 
-#contacto footer a, #inicio footer a {
-    color: white;
+/* --- Estilos de Footer --- */
+#contacto footer,
+#inicio footer {
+    color: var(--white-color);
 }
 
-#contacto footer .fa-github, #inicio footer .fa-github {
+#contacto footer a,
+#inicio footer a {
+    color: var(--white-color);
+}
+
+#contacto footer .fa-github,
+#inicio footer .fa-github,
+#contacto footer .fa-whatsapp, /* Ajustado para WhatsApp */
+#inicio footer .fa-whatsapp { /* Ajustado para WhatsApp */
     font-size: 30px;
-    color: white;
+    color: var(--white-color);
+    transition: color 0.3s ease;
 }
 
-#contacto footer .fa-linkedin-in, #inicio footer .fa-linkedin-in {
+#contacto footer .fa-github:hover,
+#inicio footer .fa-github:hover,
+#contacto footer .fa-whatsapp:hover, /* Ajustado para WhatsApp */
+#inicio footer .fa-whatsapp:hover { /* Ajustado para WhatsApp */
+    color: var(--primary-color);
+}
+
+#contacto footer .fa-linkedin-in,
+#inicio footer .fa-linkedin-in {
     color: #ff4a49;
-    background-color: white;
+    background-color: var(--white-color);
     font-size: 20px;
-    border: 0px;
     height: 32px;
     width: 32px;
     text-align: center;
-    padding: 8px 0 0 0;
-    border-radius: 80px;
+    line-height: 32px;
+    border-radius: 50%;
     margin: 0 8px;
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+#contacto footer .fa-linkedin-in:hover,
+#inicio footer .fa-linkedin-in:hover {
+    background-color: var(--secondary-color);
+    color: var(--white-color);
 }
 
 #proyectos footer {
@@ -112,200 +183,85 @@ p {
     color: #ff4a49;
 }
 
-#proyectos footer .fa-github {
+#proyectos footer .fa-github,
+#proyectos footer .fa-whatsapp { /* Ajustado para WhatsApp */
     font-size: 30px;
     color: #ff4a49;
+    transition: color 0.3s ease;
+}
+
+#proyectos footer .fa-github:hover,
+#proyectos footer .fa-whatsapp:hover { /* Ajustado para WhatsApp */
+    color: var(--secondary-color);
 }
 
 #proyectos footer .fa-linkedin-in {
     color: #ff4a49;
-    background-color: white;
+    background-color: var(--white-color);
     font-size: 20px;
-    border: 0px;
     height: 32px;
     width: 32px;
     text-align: center;
-    padding: 8px 0 0 0;
-    border-radius: 80px;
+    line-height: 32px;
+    border-radius: 50%;
     margin: 0 8px;
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    transition: background-color 0.3s ease, color 0.3s ease;
 }
 
+#proyectos footer .fa-linkedin-in:hover {
+    background-color: var(--secondary-color);
+    color: var(--white-color);
+}
+
+/* --- Estilos de Proyectos --- */
 .proyecto {
-    background-color: white;
+    background-color: var(--white-color);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    border-radius: 8px;
+    overflow: hidden;
 }
 
 .proyecto h2 {
-    font-size: 16px;
+    font-size: 1.1em;
     text-transform: uppercase;
-    color: white;
-    background: rgb(96, 5, 11);
-    background: linear-gradient(to right, rgba(184, 37, 20, 1) 0%, rgba(214, 52, 30, 1) 47%, rgba(240, 47, 23, 1) 70%, rgba(240, 47, 23, 1) 100%);
+    color: var(--white-color);
+    background: linear-gradient(to right, var(--red-gradient-start) 0%, var(--red-gradient-middle) 47%, var(--red-gradient-end) 70%, var(--red-gradient-end) 100%);
     padding: 16px;
+    margin: 0;
 }
 
 .proyecto img {
+    width: 100%;
     height: 212px;
+    object-fit: cover;
 }
 
 .proyecto p {
-    font-size: 14px;
+    font-size: 0.9em;
     height: 130px;
+    overflow: hidden;
+    padding: 15px;
+    color: var(--light-text-color);
 }
 
+/* --- Estilos de Perfil y Inicio --- */
 .foto-perfil {
-    border-radius: 600px;
+    border-radius: 50%;
     height: 300px;
-}
-#stack{
-    background: rgb(96, 5, 11);
-    background: linear-gradient(to right, rgba(184, 37, 20, 1) 0%, rgba(214, 52, 30, 1) 47%, rgba(240, 47, 23, 1) 70%, rgba(240, 47, 23, 1) 100%);
-}
-#stack h2{
-    color: white;
-    font-size: 24px;
-}
-#stack h3{
-    font-size: 14px;
-    color: #282828;
-    font-weight: 300;
-}
-#stack .tecnologia{
-    background-color: white;
-    text-align: center;
-    border-radius: 5px;
-}
-#stack .tecnologia i{
-    font-size: 60px;
-    color:#6A6A6A;
-}
-#experiencia i, #formacion i{
-    font-size: 50px;
-    color: #6A6A6A;
-}
-#experiencia i:hover {
-    color: #282828;
-}
-#experiencia img,#formacion img {
-    -webkit-filter: grayscale(100%);
-    /* Safari 6.0 - 9.0 */
-    filter: grayscale(100%);
-}
-#experiencia img:hover, #formacion img:hover {
-    -webkit-filter: grayscale(100%);
-    /* Safari 6.0 - 9.0 */
-    filter: grayscale(0%);
-}
-#experiencia h2{
-    color: #370a6d;
-    font-size: 24px;
-}
-#experiencia h3{
-    color: #6A6A6A;
-    font-size: 18px;
-    font-weight: 600;
-}
-#experiencia h4{
-    font-size: 17px;
-    color: #370A6D;
-}
-#experiencia h5{
-    color: #6A6A6A;
-    font-size: 14px;
-}
-#experiencia p{
-    color: #6a6a6a;
-    font-size: 16px;
-}
-#sobre-mi .card{
-    height: 182px;
-}
-#idiomas .card-idioma{
-    border-radius: 15px;
-}
-#idiomas .card{
-    background-color: #370A6D;
-    border-radius: 15px;
-    padding: 40px 0;
-}
-#idiomas{
-    background-color: #eee;
-}
-#idiomas h2{
-    font-size: 16px;
-    font-weight: 600px;
-}
-#idiomas ul{
-    padding: 0px;
-    font-size: 14px;
-    color: #282828;
-    list-style-type: none;
-}
-#idiomas .fas{
-    font-size: 80px;
-    color: white;
-}
-#experiencia h2, #experiencia h4, #formacion h2, #formacion h4 {
-   color: #370A6D;
-}
-#experiencia h2, #formacion h2 {
-    font-weight: 400;
-    font-size: 24px
-}
-#experiencia h3, #formacion h3{
-    color: #6A6A6A;
-    font-size: 18px;
-    font-weight: 600;
-
-}
-#experiencia h4, #formacion h4{
-    font-size: 17px;
-    
-}
-#experiencia h5, #formacion h5{
-    color: #6A6A6A;
-    font-size: 14px;
-}
-#sobre-mi .card {
-    height: 182px;
-}
-
-#idiomas .card-idioma {
-    border-radius: 15px;
-}
-
-#idiomas .card {
-    background-color: #370A6D;
-    border-radius: 15px;
-    padding: 40px 0;
-}
-
-#idiomas {
-    background-color: #eee;
-}
-
-#idiomas h2 {
-    font-size: 16px;
-    font-weight: 600px;
-}
-
-#idiomas ul {
-    padding: 0px;
-    font-size: 14px;
-    color: #282828;
-    list-style-type: none;
-}
-
-#idiomas .fas {
-    font-size: 80px;
-    color: white;
+    width: 300px;
+    object-fit: cover;
 }
 
 #inicio img {
-    height:400px;
+    height: 400px;
+    transition: height 0.3s ease;
 }
 
 #inicio img:hover {
-    height:410px;
+    height: 410px;
 }
 
 .cohete {
@@ -313,28 +269,271 @@ p {
 }
 
 #inicio p {
-    color: white;
-    font-size: 17px;
-    border: 1px white solid;
+    color: var(--white-color);
+    font-size: 1.05em;
+    border: 1px solid var(--white-color);
     border-radius: 15px;
     font-weight: 600;
+    padding: 15px 20px;
+    display: inline-block;
 }
 
-@media (max-width: 750px) {
-    #contacto {
-        background-image: url("../images/fondo-proyectos.png");
-        background-size: contain;
-        background-repeat: no-repeat;
-    }
+/* --- Sección de Stack Tecnológico --- */
+#stack {
+    background: linear-gradient(to right, var(--red-gradient-start) 0%, var(--red-gradient-middle) 47%, var(--red-gradient-end) 70%, var(--red-gradient-end) 100%);
+    padding: 40px 0;
+}
 
-    #proyectos {
-        background-size: contain;
+#stack h2 {
+    color: var(--white-color);
+    font-size: 2em;
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+#stack h3 {
+    font-size: 0.9em;
+    color: var(--dark-text-color);
+    font-weight: 300;
+    margin-top: 10px;
+}
+
+#stack .tecnologia {
+    background-color: var(--white-color);
+    text-align: center;
+    border-radius: 8px;
+    padding: 20px;
+    margin: 10px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+    transition: transform 0.3s ease;
+}
+
+#stack .tecnologia:hover {
+    transform: translateY(-5px);
+}
+
+#stack .tecnologia i {
+    font-size: 60px;
+    color: var(--light-text-color);
+    transition: color 0.3s ease;
+}
+
+#stack .tecnologia:hover i {
+    color: var(--secondary-color);
+}
+
+/* --- Experiencia y Formación --- */
+#experiencia i,
+#formacion i {
+    font-size: 50px;
+    color: var(--light-text-color);
+    transition: color 0.3s ease;
+}
+
+#experiencia i:hover,
+#formacion i:hover {
+    color: var(--dark-text-color);
+}
+
+#experiencia img,
+#formacion img {
+    filter: grayscale(100%);
+    transition: filter 0.3s ease;
+}
+
+#experiencia img:hover,
+#formacion img:hover {
+    filter: grayscale(0%);
+}
+
+#experiencia h2,
+#experiencia h4,
+#formacion h2,
+#formacion h4 {
+    color: var(--secondary-color);
+}
+
+#experiencia h2,
+#formacion h2 {
+    font-weight: 400;
+    font-size: 2em
+}
+
+#experiencia h3,
+#formacion h3 {
+    color: var(--light-text-color);
+    font-size: 1.1em;
+    font-weight: 600;
+
+}
+
+#experiencia h4,
+#formacion h4 {
+    font-size: 1.05em;
+
+}
+
+#experiencia h5,
+#formacion h5 {
+    color: var(--light-text-color);
+    font-size: 0.9em;
+}
+
+#experiencia p {
+    color: var(--light-text-color);
+    font-size: 1em;
+    line-height: 1.6;
+}
+
+/* --- Sección Sobre Mí --- */
+#sobre-mi .card {
+    height: 182px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+    background-color: var(--white-color);
+}
+
+/* --- Sección Idiomas --- */
+#idiomas {
+    background-color: var(--light-grey-bg);
+    padding: 50px 0;
+}
+
+/* Estilos para la tarjeta completa de Idiomas/Hobbies */
+#idiomas .card-idioma {
+    background-color: var(--white-color); /* Fondo blanco para toda la tarjeta */
+    border-radius: 15px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    overflow: hidden; /* Asegura que el contenido respete los bordes redondeados */
+    height: 100%; /* Asegura que todas las tarjetas tengan la misma altura */
+}
+
+/* Estilos para el wrapper del icono dentro de la tarjeta de Idiomas/Hobbies */
+#idiomas .card-icon-wrapper {
+    background-color: var(--secondary-color); /* Fondo morado para la sección del icono */
+    color: var(--white-color); /* Color de texto/icono blanco */
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 20px; /* Ajusta el padding según sea necesario */
+    border-top-left-radius: 15px;
+    border-bottom-left-radius: 15px;
+    height: 100%; /* Asegura que ocupe toda la altura de la fila */
+}
+
+/* Asegura que el icono dentro del wrapper tenga el color correcto */
+#idiomas .card-icon-wrapper .fas {
+    color: var(--white-color);
+    font-size: 80px; /* Asegura el tamaño del icono */
+    margin-bottom: 0; /* Elimina el margen inferior si se centra verticalmente */
+}
+
+#idiomas h2 {
+    font-size: 1.2em;
+    font-weight: 600;
+    color: var(--dark-text-color); /* Color de texto oscuro para el título dentro de la tarjeta blanca */
+    margin-bottom: 15px;
+}
+
+#idiomas ul {
+    padding: 0;
+    font-size: 0.9em;
+    color: var(--light-text-color); /* Color de texto gris para la lista dentro de la tarjeta blanca */
+    list-style-type: none;
+    margin-top: 20px;
+}
+
+#idiomas ul li {
+    margin-bottom: 5px;
+}
+
+
+/* --- Media Queries (Responsiveness) --- */
+@media (max-width: 768px) {
+    #contacto,
+    #proyectos,
+    #inicio,
+    #sobre-mi {
+        background-size: cover;
+        background-position: center top;
         background-repeat: no-repeat;
     }
 
     #inicio p {
-        color: #E20000;
-        font-size: 16px;
-        border: 1px, #E20000 solid;
+        color: var(--primary-color);
+        font-size: 1em;
+        border: 1px solid var(--primary-color);
+        padding: 10px 15px;
+    }
+
+    .btn-whatsapp {
+        right: 20px;
+        bottom: 20px;
+    }
+
+    .foto-perfil {
+        height: 200px;
+        width: 200px;
+    }
+
+    #stack h2 {
+        font-size: 1.7em;
+    }
+
+    #stack .tecnologia {
+        padding: 15px;
+    }
+
+    #idiomas .card { /* Esta regla podría ser redundante o necesitar ajuste si se usa .card-idioma */
+        padding: 20px 0;
+    }
+}
+
+@media (max-width: 480px) {
+    nav a {
+        font-size: 0.9em;
+    }
+
+    .btn-rojo, .btn1 {
+        padding: 8px 15px;
+        font-size: 0.9em;
+    }
+
+    .proyecto h2 {
+        font-size: 1em;
+    }
+
+    .proyecto p {
+        height: auto;
+        font-size: 0.85em;
+    }
+
+    #inicio img {
+        height: 300px;
+    }
+
+    .cohete {
+        height: 310px;
+    }
+
+    #experiencia h2, #formacion h2 {
+        font-size: 1.5em;
+    }
+
+    #experiencia h3, #formacion h3 {
+        font-size: 1em;
+    }
+
+    #experiencia h4, #formacion h4 {
+        font-size: 0.95em;
+    }
+
+    #idiomas h2 {
+        font-size: 1.1em;
     }
 }

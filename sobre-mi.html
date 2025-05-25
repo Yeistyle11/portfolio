@@ -1,32 +1,74 @@
 <!DOCTYPE html>
-<html lang="es">
+<html lang="es" class="h-100">
 
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Sobre mi</title>
-    <link rel="stylesheet" href="css/estilos.css">
+    <title>Yeison García - Sobre mí</title>
+    <link rel="icon" type="image/x-icon" href="images/favicon.ico">
+
+    <link rel="stylesheet" href="css/bootstrap/css/bootstrap.min.css">
     <link rel="stylesheet" href="css/fontawesome/css/all.min.css">
     <link rel="stylesheet" href="css/fontawesome/css/fontawesome.min.css">
-    <link rel="stylesheet" href="css/bootstrap/css/bootstrap.min.css">
-    <script src="css/bootstrap/js/bootstrap.bundle.min.js"></script>
+    <link rel="stylesheet" href="css/estilos.css">
+
+    <style>
+        :root {
+            --primary-color: #E20000;
+            --secondary-color: #370a6d;
+            --dark-text-color: #282828;
+            --light-text-color: #6a6a6a;
+            --white-color: #ffffff;
+            --light-grey-bg: #eee;
+            --red-gradient-start: rgba(184, 37, 20, 1);
+            --red-gradient-middle: rgba(214, 52, 30, 1);
+            --red-gradient-end: rgba(240, 47, 23, 1);
+        }
+
+        #idiomas .card-idioma {
+            background-color: var(--white-color);
+            border-radius: 15px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            overflow: hidden;
+        }
+
+        #idiomas .card-icon-wrapper {
+            background-color: var(--secondary-color);
+            color: var(--white-color);
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            padding: 20px;
+            border-top-left-radius: 15px;
+            border-bottom-left-radius: 15px;
+            height: 100%;
+        }
+        #idiomas .card-icon-wrapper .fas {
+            color: var(--white-color);
+            margin-bottom: 0;
+        }
+    </style>
 </head>
 
 <body id="sobre-mi" class="d-flex flex-column h-100">
     <header class="container">
-        <nav class="navbar navbar-expand-md mb-4">
+        <nav class="navbar navbar-expand-lg navbar-light mb-4">
             <div class="container-fluid">
+                <a class="navbar-brand d-none d-md-block" href="index.html">
+                    <span class="d-inline-block text-primary fs-4 fw-bold">Yeison Garcia Dev</span>
+                </a>
                 <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse"
                     aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation">
                     <span class="navbar-toggler-icon"></span>
                 </button>
                 <div class="collapse navbar-collapse" id="navbarCollapse">
-                    <ul class="navbar-nav me-auto mb-2 mb-md-0">
+                    <ul class="navbar-nav ms-auto mb-2 mb-md-0">
                         <li class="nav-item">
                             <a class="nav-link" href="index.html">Inicio</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" href="sobre-mi.html">Sobre mi</a>
+                            <a class="nav-link active" aria-current="page" href="sobre-mi.html">Sobre mí</a>
                         </li>
                         <li class="nav-item">
                             <a class="nav-link" href="proyectos.html">Proyectos</a>
@@ -35,251 +77,250 @@
                             <a class="nav-link" href="contacto.html">Contacto</a>
                         </li>
                     </ul>
-                    <div class="d-inline">
-                        <a href="" class="btn btn-rojo">Descargar mi CV<i class="fa-solid fa-download"></i></a>
+                    <div class="d-inline-block ms-md-4 mt-3 mt-md-0">
+                        <a href="CV_Yeison_Garcia.pdf" target="_blank" class="btn btn-rojo" download="CV_Yeison_Garcia.pdf">
+                            Descargar mi CV <i class="fa-solid fa-download ms-2"></i>
+                        </a>
                     </div>
                 </div>
             </div>
         </nav>
     </header>
-    <main>
-        <section id="bio" class="container">
-            <div class="row">
-                <div class="col-12 col-sm-7">
-                    <h1 class="col-12 py-5">Sobre mi</h1>
-                    <p>Apasionado por la tecnología y la programación, siempre estoy en la búsqueda de nuevas
-                        oportunidades para aprender y mejorar mis habilidades. Me encanta explorar todo lo relacionado
+
+    <main class="flex-grow-1">
+        <section id="bio" class="container py-5">
+            <div class="row align-items-center">
+                <div class="col-12 col-sm-7 order-2 order-sm-1">
+                    <h1 class="pb-3 pt-4 pt-sm-0">Sobre mí</h1>
+                    <p class="lead">Apasionado por la tecnología y la programación, siempre estoy en la búsqueda de nuevas
+                        oporttunidades para aprender y mejorar mis habilidades. Me encanta explorar todo lo relacionado
                         con el mundo digital, desde el desarrollo de software hasta las últimas innovaciones
                         tecnológicas. Mi curiosidad y dedicación me impulsan a enfrentar desafíos y a encontrar
                         soluciones creativas, lo que me permite crecer constantemente en este campo en constante
                         evolución.</p>
-                    <a href="contacto.html" class="btn btn-rojo my-5 d-none d-sm-block w-25">Enviar mensaje</a>
+                    <a href="contacto.html" class="btn btn-rojo my-4">Enviar mensaje</a>
                 </div>
-                <div class="col-12 col-sm-4">
-                    <img src="images/yeison.jpg" alt="Yeison" class="foto-perfil">
-                </div>
-                <div class="col-6 d-sm-block d-sm-none py-3">
-                    <a href="contacto.html" class="btn btn-rojo my-5 d-sm-block d-sm-none">Enviar mensaje</a>
+                <div class="col-12 col-sm-5 text-center order-1 order-sm-2 mb-4 mb-sm-0">
+                    <img src="images/yeison.jpg" alt="Yeison García - Desarrollador de Software" class="img-fluid foto-perfil">
                 </div>
             </div>
         </section>
-        <section id="stack">
+
+        <section id="stack" class="py-5">
             <div class="container">
                 <div class="row">
-                    <div class="col-12">
+                    <div class="col-12 text-center">
                         <h2 class="py-5">Stack tecnológico</h2>
                     </div>
-                    <div class="col-6 col-sm-2">
-                        <div class="tecnologia mb-4">
-                            <h3 class="pt-5 pb-1">Javascript</h3>
-                            <i class="fa-brands fa-js pb-5"></i>
+                    <div class="d-flex flex-wrap justify-content-center">
+                        <div class="col-6 col-md-4 col-lg-2">
+                            <div class="tecnologia mb-4">
+                                <h3 class="pt-5 pb-1">Javascript</h3>
+                                <i class="fa-brands fa-js pb-5"></i>
+                            </div>
                         </div>
-                    </div>
-                    <div class="col-6 col-sm-2">
-                        <div class="tecnologia mb-4">
-                            <h3 class="pt-5 pb-1">PHP</h3>
-                            <i class="fa-brands fa-php pb-5"></i>
+                        <div class="col-6 col-md-4 col-lg-2">
+                            <div class="tecnologia mb-4">
+                                <h3 class="pt-5 pb-1">PHP</h3>
+                                <i class="fa-brands fa-php pb-5"></i>
+                            </div>
                         </div>
-                    </div>
-                    <div class="col-6 col-sm-2">
-                        <div class="tecnologia mb-4">
-                            <h3 class="pt-5 pb-1">HTML</h3>
-                            <i class="fa-brands fa-html5 pb-5"></i>
+                        <div class="col-6 col-md-4 col-lg-2">
+                            <div class="tecnologia mb-4">
+                                <h3 class="pt-5 pb-1">HTML</h3>
+                                <i class="fa-brands fa-html5 pb-5"></i>
+                            </div>
                         </div>
-                    </div>
-                    <div class="col-6 col-sm-2">
-                        <div class="tecnologia mb-4">
-                            <h3 class="pt-5 pb-1">Laravel</h3>
-                            <i class="fa-brands fa-laravel pb-5"></i>
+                        <div class="col-6 col-md-4 col-lg-2">
+                            <div class="tecnologia mb-4">
+                                <h3 class="pt-5 pb-1">Laravel</h3>
+                                <i class="fa-brands fa-laravel pb-5"></i>
+                            </div>
                         </div>
-                    </div>
-                    <div class="col-6 col-sm-2">
-                        <div class="tecnologia mb-4">
-                            <h3 class="pt-5 pb-1">Bootstrap</h3>
-                            <i class="fa-brands fa-bootstrap pb-5"></i>
+                        <div class="col-6 col-md-4 col-lg-2">
+                            <div class="tecnologia mb-4">
+                                <h3 class="pt-5 pb-1">Bootstrap</h3>
+                                <i class="fa-brands fa-bootstrap pb-5"></i>
+                            </div>
                         </div>
-                    </div>
-                    <div class="col-6 col-sm-2">
-                        <div class="tecnologia mb-4">
-                            <h3 class="pt-5 pb-1">MySQL</h3>
-                            <i class="fa-solid fa-database pb-5"></i>
+                        <div class="col-6 col-md-4 col-lg-2">
+                            <div class="tecnologia mb-4">
+                                <h3 class="pt-5 pb-1">MySQL</h3>
+                                <i class="fa-solid fa-database pb-5"></i>
+                            </div>
                         </div>
-                    </div>
-                    <div class="col-6 col-sm-2">
-                        <div class="tecnologia mb-4">
-                            <h3 class="pt-5 pb-1">CSS</h3>
-                            <i class="fa-brands fa-css3-alt pb-5"></i>
+                        <div class="col-6 col-md-4 col-lg-2">
+                            <div class="tecnologia mb-4">
+                                <h3 class="pt-5 pb-1">CSS</h3>
+                                <i class="fa-brands fa-css3-alt pb-5"></i>
+                            </div>
                         </div>
-                    </div>
-                    <div class="col-6 col-sm-2">
-                        <div class="tecnologia mb-4">
-                            <h3 class="pt-5 pb-1">Git</h3>
-                            <i class="fa-brands fa-git pb-5"></i>
+                        <div class="col-6 col-md-4 col-lg-2">
+                            <div class="tecnologia mb-4">
+                                <h3 class="pt-5 pb-1">Git</h3>
+                                <i class="fa-brands fa-git pb-5"></i>
+                            </div>
                         </div>
-                    </div>
-                    <div class="col-6 col-sm-2">
-                        <div class="tecnologia mb-4">
-                            <h3 class="pt-5 pb-1">React.js</h3>
-                            <i class="fa-brands fa-react pb-5"></i>
+                        <div class="col-6 col-md-4 col-lg-2">
+                            <div class="tecnologia mb-4">
+                                <h3 class="pt-5 pb-1">React.js</h3>
+                                <i class="fa-brands fa-react pb-5"></i>
+                            </div>
                         </div>
-                    </div>
-                    <div class="col-6 col-sm-2">
-                        <div class="tecnologia mb-4">
-                            <h3 class="pt-5 pb-1">Mercadopago</h3>
-                            <i class="fa-solid fa-wallet pb-5"></i>
+                        <div class="col-6 col-md-4 col-lg-2">
+                            <div class="tecnologia mb-4">
+                                <h3 class="pt-5 pb-1">Mercadopago</h3>
+                                <i class="fa-solid fa-wallet pb-5"></i>
+                            </div>
                         </div>
-                    </div>
-                    <div class="col-6 col-sm-2">
-                        <div class="tecnologia mb-4">
-                            <h3 class="pt-5 pb-1">Amazon AWS</h3>
-                            <i class="fa-brands fa-aws pb-5"></i>
+                        <div class="col-6 col-md-4 col-lg-2">
+                            <div class="tecnologia mb-4">
+                                <h3 class="pt-5 pb-1">Amazon AWS</h3>
+                                <i class="fa-brands fa-aws pb-5"></i>
+                            </div>
                         </div>
-                    </div>
-                    <div class="col-6 col-sm-2">
-                        <div class="tecnologia mb-4">
-                            <h3 class="pt-5 pb-1">Apache</h3>
-                            <i class="fa-solid fa-server pb-5"></i>
+                        <div class="col-6 col-md-4 col-lg-2">
+                            <div class="tecnologia mb-4">
+                                <h3 class="pt-5 pb-1">Apache</h3>
+                                <i class="fa-solid fa-server pb-5"></i>
+                            </div>
                         </div>
                     </div>
                 </div>
             </div>
         </section>
-        <section id="formacion" class="container">
-            <div class="row">
-                <div class="col-12 pt-5 pb-4">
-                    <h2>Formación académica</h2>
-                </div>
-            </div>
-            <div class="row shadow bg-white rounded p-1">
-                <div class="col-12 col-sm-6">
-                    <div class="row">
-                        <div class="col-2 py-3 my-auto d-none d-sm-block">
-                            <img src="images/sena.png" class="img-fluid baw" title="Sena">
-                        </div>
-                        <div class="col-12- col-sm-10 p-3">
-                            <h3>Técnico en programación de software</h3>
-                            <h4>Servicio nacional de aprendizaje (Sena)</h4>
-                            <h5>2019-2020</h5>
-                            <p>https://www.sena.edu.co/</p>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-12 col-sm-6">
-                    <div class="row">
-                        <div class="col-2 py-3 my-auto d-none d-sm-block">
-                            <img src="images/sena.png" class="img-fluid baw" title="Sena">
-                        </div>
-                        <div class="col-12- col-sm-10 p-3">
-                            <h3>Tecnólogo en análisis y desarrollo de sistemas de información</h3>
-                            <h4>Servicio nacional de aprendizaje (Sena)</h4>
-                            <h5>2021-2023</h5>
-                            <p>https://www.sena.edu.co/</p>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-12 col-sm-6">
-                    <div class="row">
-                        <div class="col-2 py-3 my-auto d-none d-sm-block">
-                            <img src="images/uniminuto.png" class="img-fluid baw" title="Uniminuto">
-                        </div>
-                        <div class="col-12- col-sm-10 p-3">
-                            <h3>Ingeniero de Software</h3>
-                            <h4>corporación universitaria minuto de Dios</h4>
-                            <h5>2024</h5>
-                            <p>https://www.uniminuto.edu</p>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            </div>
-        </section>
-        <section id="experiencia" class="container">
+
+        <section id="formacion" class="container py-5">
             <div class="row">
                 <div class="col-12">
-                    <h2 class="pt-5 pb-4">Experiencia laboral</h2>
+                    <h2 class="pb-4">Formación académica</h2>
                 </div>
             </div>
-            <div class="row shadow">
-                <div class="col-sm-2 d-none d-sm-block p-5">
-                    <img src="images/depcsuite.png" alt="DEPCSUITE" class="img-fluid">
+            <div class="row shadow bg-white rounded p-4 mb-4">
+                <div class="col-12 col-lg-6 mb-4 mb-lg-0">
+                    <div class="row align-items-center">
+                        <div class="col-3 col-sm-2 py-3 text-center">
+                            <img src="images/sena.png" class="img-fluid baw" alt="Logo SENA" title="SENA">
+                        </div>
+                        <div class="col-9 col-sm-10 p-3">
+                            <h3>Técnico en programación de software</h3>
+                            <h4>Servicio Nacional de Aprendizaje (SENA)</h4>
+                            <h5>2019-2020</h5>
+                            <p><a href="https://www.sena.edu.co/" target="_blank" rel="noopener noreferrer" class="link-rojo">www.sena.edu.co</a></p>
+                        </div>
+                    </div>
                 </div>
-                <div class="col-sm-10 col-12 my-3">
-                    <h3>Desarrollador Junior</h3>
-                    <h4>DePCSuite</h4>
-                    <h5>enero 2024 - junio 2024</h5>
-                    <p>Diseño y desarrollo de sistemas internos para el organismo. Mantenimiento de los sistemas
-                        existentes. Gestión de base de
-                        datos y reportes. Trato con distintos clientes internos y equipos. Reuniones de avance.
-                        Organización del proyecto en
-                        Redmine. Resolución de pedidos mediante sistema de incidencias.</p>
+                <div class="col-12 col-lg-6">
+                    <div class="row align-items-center">
+                        <div class="col-3 col-sm-2 py-3 text-center">
+                            <img src="images/sena.png" class="img-fluid baw" alt="Logo SENA" title="SENA">
+                        </div>
+                        <div class="col-9 col-sm-10 p-3">
+                            <h3>Tecnólogo en análisis y desarrollo de sistemas de información</h3>
+                            <h4>Servicio Nacional de Aprendizaje (SENA)</h4>
+                            <h5>2021-2023</h5>
+                            <p><a href="https://www.sena.edu.co/" target="_blank" rel="noopener noreferrer" class="link-rojo">www.sena.edu.co</a></p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-12 col-lg-6 mt-lg-4">
+                    <div class="row align-items-center">
+                        <div class="col-3 col-sm-2 py-3 text-center">
+                            <img src="images/uniminuto.png" class="img-fluid baw" alt="Logo Uniminuto" title="Uniminuto">
+                        </div>
+                        <div class="col-9 col-sm-10 p-3">
+                            <h3>Ingeniero de Software</h3>
+                            <h4>Corporación Universitaria Minuto de Dios</h4>
+                            <h5>2024 - (en curso)</h5>
+                            <p><a href="https://www.uniminuto.edu/" target="_blank" rel="noopener noreferrer" class="link-rojo">www.uniminuto.edu</a></p>
+                        </div>
+                    </div>
                 </div>
             </div>
-            <div class="row shadow">
-                <div class="col-sm-2 d-none d-sm-block p-5">
-                    <img src="images/mantum.png" alt="MANTUM" class="img-fluid">
-                </div>
-                <div class="col-sm-10 col-12 my-3">
-                    <h3>Desarrollador</h3>
-                    <h4>Mántum S.A.S.</h4>
-                    <h5>Junio 2024</h5>
-                    <p>Diseño y desarrollo de sistemas internos para el organismo. Mantenimiento de los sistemas
-                        existentes. Gestión de base de
-                        datos y reportes. Trato con distintos clientes internos y equipos. Reuniones de avance.
-                        Organización del proyecto en
-                        Redmine. Resolución de pedidos mediante sistema de incidencias.</p>
-                </div>
-            </div>
-        </section>
-        <section id="formacion" class="container mb-5">
-            <div class="row">
+            <div class="row mt-5">
                 <div class="col-12 pt-5 pb-4">
                     <h2>Cursos de desarrollo profesional</h2>
                 </div>
             </div>
-            <div class="row shadow bg-white rounded p-1">
-                <div class="col-12 col-sm-6">
-                    <div class="row">
-                        <div class="col-2 py-3 my-auto d-none d-sm-block">
-                            <img src="images/depcsuite.png" class="img-fluid baw" title="depcsuite">
+            <div class="row shadow bg-white rounded p-4">
+                <div class="col-12 col-lg-6">
+                    <div class="row align-items-center">
+                        <div class="col-3 col-sm-2 py-3 text-center">
+                            <img src="images/depcsuite.png" class="img-fluid baw" alt="Logo DePCSuite" title="DePCSuite">
                         </div>
-                        <div class="col-12- col-sm-10 p-3">
-                            <h3>Programacion Full Stack</h3>
-                            <h4>DePCSuite</h4>
+                        <div class="col-9 col-sm-10 p-3">
+                            <h3>Programación Full Stack</h3>
+                            <h4>DePC Suite</h4>
                             <h5>Expedición: 2024</h5>
-                            <p></p>
+                            <p>Curso intensivo de desarrollo web full stack.</p>
                         </div>
                     </div>
                 </div>
             </div>
         </section>
-        <section id="idiomas">
+
+        <section id="experiencia" class="container py-5">
+            <div class="row">
+                <div class="col-12">
+                    <h2 class="pb-4">Experiencia laboral</h2>
+                </div>
+            </div>
+            <div class="row shadow bg-white rounded p-4 mb-4 align-items-center">
+                <div class="col-12 col-sm-2 text-center text-sm-start p-sm-4">
+                    <img src="images/depcsuite.png" alt="Logo DEPCSUITE" class="img-fluid baw" title="DEPCSUITE">
+                </div>
+                <div class="col-12 col-sm-10 my-3">
+                    <h3>Desarrollador Junior</h3>
+                    <h4>DePC Suite</h4>
+                    <h5>Enero 2024 - Junio 2024</h5>
+                    <p>Diseño y desarrollo de sistemas internos para el organismo. Mantenimiento de los sistemas
+                        existentes. Gestión de base de datos y reportes. Interacción con distintos clientes internos y equipos.
+                        Participación en reuniones de avance. Organización del proyecto en Redmine. Resolución de pedidos mediante
+                        sistema de incidencias.</p>
+                </div>
+            </div>
+            <div class="row shadow bg-white rounded p-4 align-items-center">
+                <div class="col-12 col-sm-2 text-center text-sm-start p-sm-4">
+                    <img src="images/mantum.png" alt="Logo MANTUM" class="img-fluid baw" title="MANTUM">
+                </div>
+                <div class="col-12 col-sm-10 my-3">
+                    <h3>Desarrollador</h3>
+                    <h4>Mántum S.A.S.</h4>
+                    <h5>Junio 2024 - Presente</h5>
+                    <p>Diseño y desarrollo de sistemas internos para el organismo. Mantenimiento de los sistemas
+                        existentes. Gestión de base de datos y reportes. Interacción con distintos clientes internos y equipos.
+                        Participación en reuniones de avance. Organización del proyecto en Redmine. Resolución de pedidos mediante
+                        sistema de incidencias.</p>
+                </div>
+            </div>
+        </section>
+
+        <section id="idiomas" class="py-5">
             <div class="container">
-                <div class="row py-5 mx-0">
-                    <div class="col-sm-6 col-12 pb-3 pb-sm-0">
-                        <div class="row mr-sm-1 bg-white card-idioma shadow me-sm-1">
-                            <div class="col-4 text-center card">
-                                <i class="fas fa-comment-alt"></i>
+                <div class="row justify-content-center g-4">
+                    <div class="col-12 col-sm-6">
+                        <div class="row card-idioma shadow align-items-center">
+                            <div class="col-4 text-center card-icon-wrapper"> <i class="fas fa-comment-alt"></i>
                             </div>
-                            <div class="col-8 p-5 pb-3">
+                            <div class="col-8 p-4">
                                 <h2>IDIOMAS</h2>
                                 <ul>
                                     <li>ESPAÑOL - Nativo</li>
-                                    <li>INGLÉS - Intermediate B2</li>
+                                    <li>INGLÉS - Intermedio (B2)</li>
                                 </ul>
                             </div>
                         </div>
                     </div>
-                    <div class="col-sm-6 col-12">
-                        <div class="row ml-sm-2 bg-white card-idioma shadow ms-sm-1">
-                            <div class="col-4 text-center card">
-                                <i class="fas fa-star"></i>
+                    <div class="col-12 col-sm-6">
+                        <div class="row card-idioma shadow align-items-center">
+                            <div class="col-4 text-center card-icon-wrapper"> <i class="fas fa-star"></i>
                             </div>
-                            <div class="col-8 p-5">
+                            <div class="col-8 p-4">
                                 <h2>HOBBIES</h2>
                                 <ul>
-                                    <li>Futbol</li>
+                                    <li>Fútbol</li>
                                     <li>Videojuegos</li>
-                                    <li>Leer</li>
+                                    <li>Lectura</li>
                                 </ul>
                             </div>
                         </div>
@@ -288,25 +329,30 @@
             </div>
         </section>
     </main>
-    <footer class="container">
-        <footer class="container mt-auto py-4">
-            <div class="row">
-                <div class="col-sm-3 col-12">
-                    <a href="https://github.com"><i class="fa-brands fa-github"></i></a>
-                    <a href="https://linkedin.com"><i class="fa-brands fa-linkedin-in"></i></a>
-                    <a href="https://wa.me/573104277843" target="_blank" rel="noopener noreferrer">
-                        <i class="fa-brands fa-whatsapp pt-3 pb-4"></i>
-                    </a>
-                </div>
-                <div class="col-sm-3 col-12">
-                    Sponsor <a href="https://depcsuite.com">DePC Suite</a>
-                </div>
-                <div class="col-sm-3 col-12">
-                    <a href="yeison:info@yeisongarcia.com.ar">info@yeisongarcia.com.co</a>
-                </div>
-            </div>
-        </footer>
 
+    <footer class="container mt-auto py-4">
+        <div class="row justify-content-between align-items-center">
+            <div class="col-12 col-md-4 text-center text-md-start mb-3 mb-md-0">
+                <a href="https://github.com/tu-usuario" target="_blank" rel="noopener noreferrer" aria-label="Mi perfil de GitHub">
+                    <i class="fab fa-github"></i>
+                </a>
+                <a href="https://linkedin.com/in/tu-usuario" target="_blank" rel="noopener noreferrer" aria-label="Mi perfil de LinkedIn">
+                    <i class="fab fa-linkedin-in"></i>
+                </a>
+                <a href="https://wa.me/573104277843" target="_blank" rel="noopener noreferrer" aria-label="Chatear por WhatsApp">
+                    <i class="fa-brands fa-whatsapp"></i>
+                </a>
+            </div>
+            <div class="col-12 col-md-4 text-center mb-3 mb-md-0">
+                Sponsor <a href="https://depcsuite.com" target="_blank" rel="noopener noreferrer" title="Visitar DePC Suite">DePC Suite</a>
+            </div>
+            <div class="col-12 col-md-4 text-center text-md-end">
+                <a href="mailto:info@yeisongarcia.com.co" aria-label="Enviar correo electrónico">info@yeisongarcia.com.co</a>
+            </div>
+        </div>
+    </footer>
+
+    <script src="css/bootstrap/js/bootstrap.bundle.min.js"></script>
 </body>
 
 </html>

@@ -4,122 +4,139 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Contacto</title>
+    <title>Yeison García - Proyectos</title>
+    <link rel="icon" type="image/x-icon" href="images/favicon.ico">
+
+    <link rel="stylesheet" href="css/bootstrap/css/bootstrap.min.css">
     <link rel="stylesheet" href="css/fontawesome/css/all.min.css">
     <link rel="stylesheet" href="css/fontawesome/css/fontawesome.min.css">
-    <link rel="stylesheet" href="css/bootstrap/css/bootstrap.min.css">
-    <script src="css/bootstrap/js/bootstrap.bundle.min.js"></script>
     <link rel="stylesheet" href="css/estilos.css">
 </head>
 
 <body id="proyectos" class="d-flex flex-column h-100">
     <header class="container">
-        <nav class="navbar navbar-expand-md mb-4">
+        <nav class="navbar navbar-expand-lg navbar-light mb-4">
             <div class="container-fluid">
+                <a class="navbar-brand d-none d-md-block" href="index.html">
+                    <span class="d-inline-block text-primary fs-4 fw-bold">Yeison Garcia Dev</span>
+                </a>
                 <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse"
                     aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation">
                     <span class="navbar-toggler-icon"></span>
                 </button>
                 <div class="collapse navbar-collapse" id="navbarCollapse">
-                    <ul class="navbar-nav me-auto mb-2 mb-md-0">
+                    <ul class="navbar-nav ms-auto mb-2 mb-md-0">
                         <li class="nav-item">
                             <a class="nav-link" href="index.html">Inicio</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" href="sobre-mi.html">Sobre mi</a>
+                            <a class="nav-link" href="sobre-mi.html">Sobre mí</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" href="proyectos.html">Proyectos</a>
+                            <a class="nav-link active" aria-current="page" href="proyectos.html">Proyectos</a>
                         </li>
                         <li class="nav-item">
                             <a class="nav-link" href="contacto.html">Contacto</a>
                         </li>
                     </ul>
-                    <div class="d-inline">
-                        <a href="" class="btn btn-rojo">Descargar mi CV<i class="fa-solid fa-download"></i></a>
+                    <div class="d-inline-block ms-md-4 mt-3 mt-md-0">
+                        <a href="CV_Yeison_Garcia.pdf" target="_blank" class="btn btn-rojo" download="CV_Yeison_Garcia.pdf">
+                            Descargar mi CV <i class="fa-solid fa-download ms-2"></i>
+                        </a>
                     </div>
                 </div>
             </div>
         </nav>
     </header>
-    <main class="container">
-        <div class="row">
-            <div class="col12 pt-3 pb-5">
-                <h1>Proyectos</h1>
+
+    <main class="flex-grow-1">
+        <section class="container py-5">
+            <div class="row">
+                <div class="col-12 py-5">
+                    <h1>Mis Proyectos</h1>
+                </div>
             </div>
-        </div>
-        <div class="row">
-            <div class="col-12">
-                <p>Los siguientes son algunos trabajos que he realizado: </p>
-            </div>
-        </div>
-        <div class="row">
-            <div class="col-12 col-sm-4 p-4">
-                <div class="row border proyecto pb-5">
-                    <div class="col-12 p-0">
-                        <img src="images/abmclientes.png" alt="ABM CLIENTES" class="img-fluid">
-                        <h2>ABM CLIENTES</h2>
-                        <p class="py-2 px-3">Alta, baja y modificacion de un registro de clientes. Realizado en HTML, CSS, PHP, Bootstrap
-                            y Json.</p>
+            <div class="row gy-4">
+                <div class="col-12 col-sm-6 col-lg-4">
+                    <div class="proyecto card shadow rounded pb-4 h-100">
+                        <img src="images/abmclientes.png" alt="Captura de pantalla de ABM Clientes" class="img-fluid card-img-top">
+                        <div class="card-body px-3">
+                            <h2 class="card-title">ABM Clientes</h2>
+                            <p class="card-text">Alta, baja y modificación de un registro de clientes. Desarrollado con HTML, CSS, PHP, Bootstrap y JSON para la gestión de datos.</p>
+                        </div>
+                        <div class="row mx-0">
+                            <div class="col-6 text-center">
+                                <a href="#" class="btn btn-rojo">Ver online</a>
+                            </div>
+                            <div class="col-6 text-center">
+                                <a href="#" class="link-rojo">Código fuente</a>
+                            </div>
+                        </div>
                     </div>
-                    <div class="col-6">
-                        <a href="#" class="btn-rojo">Ver online</a>
+                </div>
+
+                <div class="col-12 col-sm-6 col-lg-4">
+                    <div class="proyecto card shadow rounded pb-4 h-100">
+                        <img src="images/abmventas.png" alt="Captura de pantalla de Sistema de Gestión de Ventas" class="img-fluid card-img-top">
+                        <div class="card-body px-3">
+                            <h2 class="card-title">Sistema de Gestión de Ventas</h2>
+                            <p class="card-text">Sistema integral para la gestión de clientes, productos y ventas. Implementado con HTML, CSS, PHP (MVC), Bootstrap, JavaScript, Ajax, jQuery y MySQL como base de datos.</p>
+                        </div>
+                        <div class="row mx-0">
+                            <div class="col-6 text-center">
+                                <a href="#" class="btn btn-rojo">Ver online</a>
+                            </div>
+                            <div class="col-6 text-center">
+                                <a href="#" class="link-rojo">Código fuente</a>
+                            </div>
+                        </div>
                     </div>
-                    <div class="col-6 text-center">
-                        <a href="#" class="link-rojo">Codigo fuente</a>
+                </div>
+
+                <div class="col-12 col-sm-6 col-lg-4">
+                    <div class="proyecto card shadow rounded pb-4 h-100">
+                        <img src="images/proyecto-integrador.png" alt="Captura de pantalla de Proyecto Integrador" class="img-fluid card-img-top">
+                        <div class="card-body px-3">
+                            <h2 class="card-title">Proyecto Integrador</h2>
+                            <p class="card-text">Proyecto Full Stack desarrollado en PHP, Laravel, Javascript, jQuery, Ajax, HTML, CSS, Mercadopago, incluyendo un panel de administración, gestor de usuarios, módulo de permisos y funcionalidades afines.</p>
+                        </div>
+                        <div class="row mx-0">
+                            <div class="col-6 text-center">
+                                <a href="#" class="btn btn-rojo">Ver online</a>
+                            </div>
+                            <div class="col-6 text-center">
+                                <a href="#" class="link-rojo">Código fuente</a>
+                            </div>
+                        </div>
                     </div>
                 </div>
             </div>
-            <div class="col-12 col-sm-4 p-4">
-                <div class="row border proyecto pb-5">
-                    <div class="col-12 p-0">
-                        <img src="images/abmventas.png" alt="ABM CLIENTES" class="img-fluid">
-                        <h2>SISTEMA DE GESTION DE VENTAS</h2>
-                        <p class="py-2 px-3">Sistema de gestion de clientes, productos y ventas. Realizado en HTML, CSS, PHP, MVC, Bootstrap, Js, Ajax, jQuery, y MySQL de base de datos.</p>
-                    </div>
-                    <div class="col-6">
-                        <a href="#" class="btn-rojo">Ver online</a>
-                    </div>
-                    <div class="col-6 text-center">
-                        <a href="#" class="link-rojo">Codigo fuente</a>
-                    </div>
-                </div>
-            </div>
-            <div class="col-12 col-sm-4 p-4">
-                <div class="row border proyecto pb-5">
-                    <div class="col-12 p-0">
-                        <img src="images/proyecto-integrador.png" alt="ABM CLIENTES" class="img-fluid">
-                        <h2>PROYECTO INTEGRADOR</h2>
-                        <p class="py-2 px-3">Proyecto Full Stack desarrollado en PHP, Laravel, Javascript, jQuery, Ajax, HTML, CSS, Mercadopago con panel administrador, gestor de usuarios, modulo de permisos, y funcionalidades a fines.</p>
-                    </div>
-                    <div class="col-6">
-                        <a href="#" class="btn-rojo">Ver online</a>
-                    </div>
-                    <div class="col-6 text-center">
-                        <a href="#" class="link-rojo">Codigo fuente</a>
-                    </div>
-                </div>
-            </div>
-        </div>
+        </section>
     </main>
-    <footer class=" container mt-auto pb-4">
-        <div class="btn-whatsapp">
-            <i class="fa-brands fa-whatsapp"></i>
-        </div>
-        <div class="row">
-            <div class="col-3">
-                <a href="https://github.com"><i class="fab fa-github"></i></a>
-                <a href="https://linkedin.com"><i class="fab fa-linkedin-in"></i></a>
+
+    <footer class="container mt-auto py-4">
+        <div class="row justify-content-between align-items-center">
+            <div class="col-12 col-md-4 text-center text-md-start mb-3 mb-md-0">
+                <a href="https://github.com/tu-usuario" target="_blank" rel="noopener noreferrer" aria-label="Mi perfil de GitHub">
+                    <i class="fab fa-github"></i>
+                </a>
+                <a href="https://linkedin.com/in/tu-usuario" target="_blank" rel="noopener noreferrer" aria-label="Mi perfil de LinkedIn">
+                    <i class="fab fa-linkedin-in"></i>
+                </a>
+                <a href="https://wa.me/573104277843" target="_blank" rel="noopener noreferrer" aria-label="Chatear por WhatsApp">
+                    <i class="fa-brands fa-whatsapp"></i>
+                </a>
             </div>
-            <div class="col-3">
-                Sponsor <a href="https://depcsuite.com" target="_blank" title="DEPCSUITE">DePC Suite</a>
+            <div class="col-12 col-md-4 text-center mb-3 mb-md-0">
+                Sponsor <a href="https://depcsuite.com" target="_blank" rel="noopener noreferrer" title="Visitar DePC Suite">DePC Suite</a>
             </div>
-            <div class="col-3">
-                <a href="yeison:info@yeisongarcia.com.ar">info@yeisongarcia.com.ar</a>
+            <div class="col-12 col-md-4 text-center text-md-end">
+                <a href="mailto:info@yeisongarcia.com.co" aria-label="Enviar correo electrónico">info@yeisongarcia.com.co</a>
             </div>
         </div>
     </footer>
 
+    <script src="css/bootstrap/js/bootstrap.bundle.min.js"></script>
 </body>
 
 </html>
